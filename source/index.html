@@ -30,7 +30,7 @@
           </svg>
         </a>
         <button class="page-header__toggle page-header__toggle--close page-header__toggle--no-js" type="button"><span>Открыть меню</span></button>
-        <nav class="nav nav--open">
+        <nav class="page-header__nav nav nav--open">
           <ul class="nav__list">
             <li class="nav__item">
               <a class="nav__link" href="#advantages">Преимущества</a>
@@ -47,25 +47,21 @@
           </ul>
         </nav>
       </div>
+      <div class="page-header__screen screen">
+        <div class="screen__wrapper">
+          <h1 class="screen__header"><span>Круизы</span> в Антарктику</h1>
+          <p class="screen__text">Волшебный мир айсбергов и пингвинов</p>
+        </div>
+      </div>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Путешествия в Антарктику</h1>
 
-      <section class="main-block">
-        <div class="main-block__wrapper">
-          <h2 class="main-block__title">Круизы в Антарктику</h1></h2>
-          <p class="main-block__text">Волшебный мир айсбергов и пингвинов</p>
-          <picture>
-            <img class="main-block__image" src="img/first-screen-desktop.jpg" alt="">
-          </picture>
-        </div>
-      </section>
-
       <section class="journeys">
         <div class="journeys__wrapper">
           <div class="journeys__description">
-            <h2 class="journeys__header">Путешествие на край Земли</h2>
+            <h2 class="journeys__title">Путешествие на край Земли</h2>
             <p class="journeys__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром
               Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
               несколько
@@ -73,7 +69,21 @@
           </div>
           <div class="journeys__img">
             <picture>
-              <img src="img/about-desktop.png" alt="Изображение пингвинов" width="560" height="301">
+              <!-- 1х: 290px; 2x: 580px -->
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/about-mobile.webp 1x, img/about-mobile@2x.webp 2x">
+              <!-- 1х: 324px; 2x: 648px -->
+              <source type="image/webp" media="(max-width: 1023px)"
+                srcset="img/about-tablet.webp 1x, img/about-tablet@2x.webp 2x">
+              <!-- 1х: 560px; 2x: 1120px -->
+              <source type="image/webp" srcset="img/about-desktop.webp, img/about-desktop@2x.webp 2x">
+
+              <!-- 1х: 290px; 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="img/about-mobile.png 1x, img/about-mobile@2x.png 2x">
+              <!-- 1х: 324px; 2x: 648px -->
+              <source media="(max-width: 1023px)" srcset="img/about-tablet.png 1x, img/about-tablet@2x.png 2x">
+              <!-- 1х: 560px; 2x: 1120px -->
+              <img src="img/about-desktop.png" srcset="img/about-desktop@2x.png 2x" alt="Изображение пингвинов" height="301">
             </picture>
           </div>
         </div>
@@ -81,7 +91,7 @@
 
       <section class="advantages" id="advantages">
         <div class="advantages__wrapper">
-          <h2 class="advantages__header">Преимущества</h2>
+          <h2 class="advantages__title">Преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--ship">
               <h3>Небольшой круизный лайнер</h3>
@@ -103,7 +113,7 @@
       </section>
 
       <section class="catalog" id="catalog">
-        <h2 class="catalog__header">Ближайшие круизы</h2>
+        <h2 class="catalog__title">Ближайшие круизы</h2>
         <div class="catalog__wrapper">
           <ul class="catalog__list">
             <li class="catalog__item" tabindex="0">
@@ -368,17 +378,17 @@
         <div class="footer__socials socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__link socials__link--fb" href="https://www.facebook.com" aria-label="Facebook">
+              <a class="socials__link" href="https://www.facebook.com" aria-label="Facebook">
                 <svg width="11" height="20"  xmlns="http://www.w3.org/2000/svg"><path d="M7.333 11.5h2.62L11 7.5H7.333v-2c0-1.03 0-2 2.096-2H11V.14C10.659.097 9.369 0 8.007 0 5.163 0 3.143 1.657 3.143 4.7v2.8H0v4h3.143V20h4.19v-8.5z"/></svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--instagram" href="https://www.instagram.com" aria-label="Instagram">
+              <a class="socials__link" href="https://www.instagram.com" aria-label="Instagram">
                 <svg width="20" height="20"  xmlns="http://www.w3.org/2000/svg"><path d="M10 0c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153A4.904 4.904 0 01.525 16.55C.277 15.913.11 15.187.06 14.122.013 13.056 0 12.717 0 10c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 013.45.525C4.088.277 4.812.11 5.878.06 6.944.013 7.283 0 10 0zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM10 7a3 3 0 110 6 3 3 0 010-6z"/></svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--twitter" href="https://www.twitter.com" aria-label="Twitter">
+              <a class="socials__link" href="https://www.twitter.com" aria-label="Twitter">
                 <svg width="20" height="16"  xmlns="http://www.w3.org/2000/svg"><path d="M19.999 1.9a8.33 8.33 0 01-2.357.635A4.063 4.063 0 0019.448.3a8.281 8.281 0 01-2.606.98A4.124 4.124 0 0014.513.054a4.162 4.162 0 00-2.605.424 4.065 4.065 0 00-1.804 1.898 3.978 3.978 0 00-.254 2.587 11.8 11.8 0 01-4.685-1.225A11.617 11.617 0 011.392.744a3.974 3.974 0 00-.555 2.03c0 1.4.724 2.637 1.825 3.36A4.14 4.14 0 01.804 5.63v.05a4 4 0 00.928 2.557A4.118 4.118 0 004.095 9.64a4.196 4.196 0 01-1.854.07 4.043 4.043 0 001.46 2.007 4.15 4.15 0 002.373.797 8.288 8.288 0 01-2.868 1.43A8.365 8.365 0 010 14.186 11.746 11.746 0 006.29 16c7.547 0 11.675-6.152 11.675-11.488 0-.174-.005-.35-.013-.522A8.262 8.262 0 0020 1.9h-.001z"/></svg>
               </a>
             </li>
@@ -386,5 +396,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
