@@ -1,5 +1,5 @@
-'use strict';
 var objectFitImages = (function () {
+  'use strict';
 
   var OFI = 'fregante:object-fit-images';
   var propRegex = /(object-fit|object-position)\s*:\s*([-.\w\s%]+)/g;
@@ -177,7 +177,7 @@ var objectFitImages = (function () {
     }
   }
 
-  function fix (imgs, opts) {
+  function fix(imgs, opts) {
     var startAutoMode = !autoModeEnabled && !imgs;
     opts = opts || {};
     imgs = imgs || 'img';
@@ -229,4 +229,5 @@ var objectFitImages = (function () {
   hijackAttributes();
 
   return fix;
+
 }());

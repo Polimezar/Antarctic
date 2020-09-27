@@ -27,6 +27,10 @@
   }
 }
 
+.form__item input {
+  cursor: pointer;
+}
+
 .form__item--checkbox input:focus + label::before {
   outline: #f9fbfd auto 1px;
   opacity: 0.8;
