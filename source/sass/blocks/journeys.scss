@@ -84,12 +84,13 @@
   }
 
   .journeys__img {
-    width: 324px;
+    width: 50%;
   }
 
   .journeys__img img {
-    width: 324px;
+    width: 100%;
     height: 264px;
+    object-fit: cover;
   }
 }
 
