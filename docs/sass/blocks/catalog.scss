@@ -1,0 +1,253 @@
+.catalog {
+  margin-bottom: 90px;
+  padding-top: 111px;
+}
+
+.catalog__wrapper {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  box-sizing: border-box;
+  width: calc(100% / 4 - 30px);
+  height: 386px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  background-color: #011c40;
+
+  &:hover {
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  }
+
+  &:focus {
+    box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  }
+
+  &:hover .catalog__popup {
+    display: block;
+  }
+
+  &:hover .catalog__inner {
+    display: none;
+  }
+}
+
+.catalog__popup {
+  z-index: 10;
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 386px;
+}
+
+.catalog__description {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 35px 25px;
+  padding-top: 29px;
+}
+
+.catalog__img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.catalog__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 49px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+  text-align: center;
+}
+
+.catalog__inner {
+  position: relative;
+  height: 386px;
+}
+
+.catalog__inner img {
+  width: 100%;
+}
+
+.catalog__inner h3 {
+  position: absolute;
+  bottom: 22px;
+  left: 30px;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #f9fbfd;
+}
+
+.catalog__description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.catalog__description h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #f9fbfd;
+}
+
+.catalog__description strong {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #f9fbfd;
+}
+
+.catalog__popup p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #d8d8d9;
+}
+
+.catalog__button {
+  display: block;
+  align-self: flex-end;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+  text-align: center;
+  text-decoration: none;
+  background-color: #f9fbfd;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.6;
+    background-color: #f9fbfd;
+  }
+}
+
+@media (max-width: 1023px) {
+  .catalog {
+    padding-top: 90px;
+    margin-bottom: 70px;
+  }
+
+  .catalog__wrapper {
+    box-sizing: border-box;
+    max-width: 768px;
+    padding: 0 45px;
+    margin: 0 auto;
+  }
+
+  .catalog__item {
+    width: calc(100% / 2 - 30px);
+  }
+
+  .catalog__popup {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .catalog__img {
+    height: 386px;
+  }
+
+  .catalog__title {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .catalog__inner h3 {
+    bottom: 27px;
+    left: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    padding-top: 57px;
+    margin-bottom: 35px;
+  }
+
+  .catalog__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .catalog__wrapper {
+    box-sizing: border-box;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .catalog__item {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .catalog__hover {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .catalog__inner h3 {
+    bottom: 17px;
+    left: 24px;
+  }
+
+  .catalog__description {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

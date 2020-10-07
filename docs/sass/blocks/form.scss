@@ -1,0 +1,59 @@
+.form__checkbox {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 31px;
+  padding-left: 23px;
+  padding-top: 5px;
+  font-size: 10px;
+  line-height: 13px;
+  color: #f9fbfd;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 1px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #f9fbfd;
+  }
+
+  &:hover::before {
+    background-color: #f9fbfd;
+    opacity: 0.8;
+  }
+}
+
+.form__item input {
+  cursor: pointer;
+}
+
+.form__item--checkbox input:focus + label::before {
+  outline: #f9fbfd auto 1px;
+  opacity: 0.8;
+}
+
+.form__item input:checked + .form__checkbox::before {
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80%;
+}
+
+@media (max-width: 767px) {
+  .form__checkbox {
+    margin-bottom: 25px;
+    padding-left: 29px;
+    padding-right: 48px;
+    padding-top: 0;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

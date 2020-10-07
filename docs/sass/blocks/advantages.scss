@@ -1,0 +1,240 @@
+.advantages {
+  padding-top: 105px;
+  padding-bottom: 80px;
+  background-color: #d9e6f4;
+  background-image: url("../img/bg-features-desktop@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-features-desktop@2x.jpg");
+  }
+}
+
+.advantages__wrapper {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 48px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  text-align: center;
+  color: #011c40;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  box-sizing: border-box;
+  width: calc(100% / 3 - 27px);
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 80px 31px 26px 31px;
+  background-color: #ffffff;
+}
+
+.advantages__item--ship {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 30px;
+    content: "";
+    width: 27px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url("../img/ship.png");
+  }
+}
+
+.advantages__item--includ {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 36px;
+    content: "";
+    width: 38px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url("../img/tick.png");
+  }
+}
+
+.advantages__item--tours {
+  position: relative;
+  margin-right: 0;
+
+  &::before {
+    position: absolute;
+    top: 39px;
+    content: "";
+    width: 42px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-image: url("../img/boat.png");
+  }
+}
+
+.advantages__item h3 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 9px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+}
+
+.advantages__item p {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+}
+
+@media (max-width: 1023px) {
+  .advantages {
+    padding-top: 89px;
+    padding-bottom: 60px;
+    background-image: url("../img/bg-features-tablet@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-features-tablet@2x.jpg");
+    }
+  }
+
+  .advantages__title {
+    font-size: 26px;
+  }
+
+  .advantages__wrapper {
+    box-sizing: border-box;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 45px;
+  }
+
+  .advantages__header {
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .advantages__item h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .advantages__item {
+    width: calc(100% / 3 - 20px);
+    margin-right: 30px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-right: 17px;
+    padding-left: 19px;
+  }
+
+  .advantages__item--ship {
+    &::before {
+      top: 25px;
+      width: 21px;
+      height: 26px;
+      background-size: 21px;
+    }
+  }
+
+  .advantages__item--includ {
+    &::before {
+      top: 30px;
+      width: 33px;
+      height: 19px;
+      background-size: 33px;
+    }
+  }
+
+  .advantages__item--tours {
+    margin-right: 0;
+
+    &::before {
+      top: 31px;
+      width: 38px;
+      height: 13px;
+      background-size: 38px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .advantages {
+    padding-top: 54px;
+    padding-bottom: 36px;
+    background-image: url("../img/bg-features-mobile@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-features-mobile@2x.jpg");
+    }
+  }
+
+  .advantages__title {
+    margin-bottom: 27px;
+    font-size: 24px;
+  }
+
+  .advantages__wrapper {
+    box-sizing: border-box;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .advantages__header {
+    margin-bottom: 31px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .advantages__list {
+    flex-direction: column;
+  }
+
+  .advantages__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .advantages__item h3 {
+    max-width: 170px;
+  }
+}
+
+@media (min-width: 321px) {
+  .advantages__item h3 {
+    max-width: 100%;
+  }
+}

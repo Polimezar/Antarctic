@@ -1,0 +1,242 @@
+.booking {
+  padding-top: 48px;
+  padding-bottom: 50px;
+  background-color: #b0d8fa;
+  background-image: url("../img/bg-booking-desktop@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-booking-desktop@2x.jpg");
+  }
+}
+
+.booking__wrapper {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.booking__info {
+  padding-top: 163px;
+  padding-left: 60px;
+}
+
+.booking__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+}
+
+.booking__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 17px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+}
+
+.booking__mobile p {
+  display: none;
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 403px;
+  margin-right: 60px;
+  padding: 44px 50px 50px 50px;
+  background-color: #011c40;
+}
+
+.booking__form p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 28px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #f9fbfd;
+}
+
+.booking__form input {
+  display: block;
+  box-sizing: border-box;
+  width: 303px;
+  margin-bottom: 19px;
+  padding: 11px 12px 12px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6b8cad;
+    border: none;
+    opacity: 0.8;
+  }
+}
+
+.booking__form input[type="text"],
+.booking__form input[type="tel"],
+.booking__form input[type="email"] {
+  border-radius: 0;
+}
+
+.booking__form input:focus,
+.booking__form button:focus {
+  outline: #f9fbfd auto 1px;
+  opacity: 0.8;
+}
+
+.booking__button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9fbfd;
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: #011c40;
+    background-color: #f9fbfd;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 1023px) {
+  .booking {
+    padding-bottom: 101px;
+    background-image: url("../img/bg-booking-tablet@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-booking-tablet@2x.jpg");
+    }
+  }
+
+  .booking__wrapper {
+    flex-direction: column;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 45px;
+  }
+
+  .booking__info {
+    padding-top: 39px;
+    padding-left: 0;
+    margin-bottom: 53px;
+  }
+
+  .booking__title {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+  }
+
+  .booking__text {
+    margin: 0;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .booking__mobile p {
+    display: none;
+  }
+
+  .booking__form {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .booking {
+    padding-bottom: 65px;
+    background-image: url("../img/bg-booking-mobile@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-booking-mobile@2x.jpg");
+    }
+  }
+
+  .booking__wrapper {
+    box-sizing: border-box;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .booking__info {
+    margin-bottom: 54px;
+    padding-top: 10px;
+  }
+
+  .booking__mobile p {
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .booking__title {
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .booking__text {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .booking__form {
+    width: 290px;
+    padding-top: 35px;
+    padding-bottom: 41px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+
+  .booking__form input {
+    width: 232px;
+  }
+
+  .booking__form p {
+    width: 200px;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    padding-left: 25px;
+  }
+}
